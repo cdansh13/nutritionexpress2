@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Products | Nutrition Express</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/navbar.css">
+  <link rel="stylesheet" href="css/products-page.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&family=Poppins:wght@300;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="cursor"></div>
+  <div class="cursor-follower"></div>
+
+
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <a href="index.html" data-nav-link>Nutrition<span>Express</span></a>
+      </div>
+      <div class="nav-links">
+        <a href="index.html" data-nav-link>Home</a>
+        <a href="products.html" class="active" data-nav-link>Products</a>
+      </div>
+      <div class="cta-button">
+        <a href="#" class="btn-shop">Shop Now</a>
+      </div>
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-header">
+      <h1>Our Products</h1>
+      <p>Discover premium quality supplements designed for results</p>
+    </section>
+
+    <section class="product-filters">
+      <div class="filter-container">
+        <div class="filter-group">
+          <button class="filter-btn active" data-filter="all">All Products</button>
+          <button class="filter-btn" data-filter="creatine">Creatine</button>
+          <button class="filter-btn" data-filter="protein">Protein</button>
+          <button class="filter-btn" data-filter="performance">Performance</button>
+        </div>
+        <div class="sort-group">
+          <label for="sort">Sort by:</label>
+          <select id="sort">
+            <option value="featured">Featured</option>
+            <option value="price-low">Price: Low to High</option>
+            <option value="price-high">Price: High to Low</option>
+            <option value="newest">Newest</option>
+          </select>
+        </div>
+      </div>
+    </section>
+
+    <section class="products-grid">
+      <div class="product-card" data-product-id="1" data-category="creatine">
+        <div class="product-image">
+          <img src="https://images.pexels.com/photos/3621181/pexels-photo-3621181.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Creatine Monohydrate">
+          <div class="product-badge">Bestseller</div>
+        </div>
+        <div class="product-info">
+          <h3>Creatine Monohydrate</h3>
+          <p class="product-desc">Pure creatine formula for increased strength and power.</p>
+          <div class="product-meta">
+            <div class="product-rating">
+              <span class="stars">★★★★★</span>
+              <span class="count">(124)</span>
+            </div>
+            <div class="product-price">$39.99</div>
+          </div>
+          <a href="#" class="btn-view">Quick View</a>
+        </div>
+      </div>
+
+      <div class="product-card" data-product-id="2" data-category="creatine">
+        <div class="product-image">
+          <img src="https://images.pexels.com/photos/4397833/pexels-photo-4397833.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Creatine HCL">
+        </div>
+        <div class="product-info">
+          <h3>Creatine HCL</h3>
+          <p class="product-desc">Advanced formula with enhanced absorption and no bloating.</p>
+          <div class="product-meta">
+            <div class="product-rating">
+              <span class="stars">★★★★☆</span>
+              <span class="count">(86)</span>
+            </div>
+            <div class="product-price">$49.99</div>
+          </div>
+          <a href="#" class="btn-view">Quick View</a>
+        </div>
+      </div>
+
+      <div class="product-card" data-product-id="3" data-category="creatine">
+        <div class="product-image">
+          <img src="https://images.pexels.com/photos/4033918/pexels-photo-4033918.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Creatine Performance Blend">
+          <div class="product-badge">New</div>
+        </div>
+        <div class="product-info">
+          <h3>Performance Blend</h3>
+          <p class="product-desc">Premium blend with added BCAAs and electrolytes.</p>
+          <div class="product-meta">
+            <div class="product-rating">
+              <span class="stars">★★★★★</span>
+              <span class="count">(42)</span>
+            </div>
+            <div class="product-price">$59.99</div>
+          </div>
+          <a href="#" class="btn-view">Quick View</a>
+        </div>
+      </div>
+
+      <div class="product-card" data-product-id="4" data-category="creatine">
+        <div class="product-image">
+          <img src="https://images.pexels.com/photos/3621189/pexels-photo-3621189.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Micronized Creatine">
+        </div>
+        <div class="product-info">
+          <h3>Micronized Creatine</h3>
+          <p class="product-desc">Ultra-fine powder for improved dissolution and absorption.</p>
+          <div class="product-meta">
+            <div class="product-rating">
+              <span class="stars">★★★★☆</span>
+              <span class="count">(67)</span>
+            </div>
+            <div class="product-price">$44.99</div>
+          </div>
+          <a href="#" class="btn-view">Quick View</a>
+        </div>
+      </div>
+
+      <div class="product-card" data-product-id="5" data-category="protein">
+        <div class="product-image">
+          <img src="https://images.pexels.com/photos/4474052/pexels-photo-4474052.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Whey Protein Isolate">
+        </div>
+        <div class="product-info">
+          <h3>Whey Protein Isolate</h3>
+          <p class="product-desc">Premium protein with 27g protein per serving.</p>
+          <div class="product-meta">
+            <div class="product-rating">
+              <span class="stars">★★★★★</span>
+              <span class="count">(215)</span>
+            </div>
+            <div class="product-price">$54.99</div>
+          </div>
+          <a href="#" class="btn-view">Quick View</a>
+        </div>
+      </div>
+
+      <div class="product-card" data-product-id="6" data-category="protein">
+        <div class="product-image">
+          <img src="https://images.pexels.com/photos/3621238/pexels-photo-3621238.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Plant Protein">
+          <div class="product-badge">Vegan</div>
+        </div>
+        <div class="product-info">
+          <h3>Plant Protein</h3>
+          <p class="product-desc">Plant-based protein formula with complete amino profile.</p>
+          <div class="product-meta">
+            <div class="product-rating">
+              <span class="stars">★★★★☆</span>
+              <span class="count">(93)</span>
+            </div>
+            <div class="product-price">$49.99</div>
+          </div>
+          <a href="#" class="btn-view">Quick View</a>
+        </div>
+      </div>
+
+      <div class="product-card" data-product-id="7" data-category="performance">
+        <div class="product-image">
+          <img src="https://images.pexels.com/photos/4114132/pexels-photo-4114132.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Pre-Workout Formula">
+        </div>
+        <div class="product-info">
+          <h3>Pre-Workout Formula</h3>
+          <p class="product-desc">Energy and focus blend with creatine and caffeine.</p>
+          <div class="product-meta">
+            <div class="product-rating">
+              <span class="stars">★★★★☆</span>
+              <span class="count">(108)</span>
+            </div>
+            <div class="product-price">$47.99</div>
+          </div>
+          <a href="#" class="btn-view">Quick View</a>
+        </div>
+      </div>
+
+      <div class="product-card" data-product-id="8" data-category="performance">
+        <div class="product-image">
+          <img src="https://images.pexels.com/photos/4464916/pexels-photo-4464916.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="BCAA Recovery">
+          <div class="product-badge">Top Rated</div>
+        </div>
+        <div class="product-info">
+          <h3>BCAA Recovery</h3>
+          <p class="product-desc">Branched chain amino acids for optimal recovery.</p>
+          <div class="product-meta">
+            <div class="product-rating">
+              <span class="stars">★★★★★</span>
+              <span class="count">(174)</span>
+            </div>
+            <div class="product-price">$36.99</div>
+          </div>
+          <a href="#" class="btn-view">Quick View</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-logo">
+        <h2>Nutrition<span>Express</span></h2>
+        <p>Premium sports nutrition for elite performance.</p>
+      </div>
+      <div class="footer-links">
+        <div class="link-group">
+          <h4>Navigation</h4>
+          <a href="index.html">Home</a>
+          <a href="products.html">Products</a>
+          <a href="#">About Us</a>
+          <a href="#">Contact</a>
+        </div>
+        <div class="link-group">
+          <h4>Products</h4>
+          <a href="#">Creatine</a>
+          <a href="#">Protein</a>
+          <a href="#">Pre-Workout</a>
+          <a href="#">Accessories</a>
+        </div>
+        <div class="link-group">
+          <h4>Support</h4>
+          <a href="#">FAQ</a>
+          <a href="#">Shipping</a>
+          <a href="#">Returns</a>
+          <a href="#">Privacy Policy</a>
+        </div>
+      </div>
+      <div class="footer-newsletter">
+        <h4>Stay Updated</h4>
+        <p>Subscribe to our newsletter for exclusive offers and updates.</p>
+        <form>
+          <input type="email" placeholder="Your email address">
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Nutrition Express. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <div class="product-modal">
+    <div class="modal-content">
+      <div class="modal-close">&times;</div>
+      <div class="modal-product">
+        <div class="modal-image">
+          <img src="" alt="Product Image">
+        </div>
+        <div class="modal-info">
+          <h3 class="modal-title"></h3>
+          <div class="modal-rating">
+            <span class="stars"></span>
+            <span class="reviews"></span>
+          </div>
+          <div class="modal-price"></div>
+          <div class="modal-description"></div>
+          <div class="modal-benefits">
+            <h4>Key Benefits</h4>
+            <ul></ul>
+          </div>
+          <div class="modal-actions">
+            <div class="quantity">
+              <button class="qty-minus">-</button>
+              <input type="number" value="1" min="1">
+              <button class="qty-plus">+</button>
+            </div>
+            <button class="btn-add-cart">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/gsap.min.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/products.js"></script>
+  <script src="js/cursor.js"></script>
+</body>
+</html>

@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nutrition Express | Premium Creatine</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/navbar.css">
+  <link rel="stylesheet" href="css/hero.css">
+  <link rel="stylesheet" href="css/features.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/particles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&family=Poppins:wght@300;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="cursor"></div>
+  <div class="cursor-follower"></div>
+
+
+
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <a href="index.html" data-nav-link>Nutrition<span>Express</span></a>
+      </div>
+      <div class="nav-links">
+        <a href="index.html" class="active" data-nav-link>Home</a>
+        <a href="products.html" data-nav-link>Products</a>
+      </div>
+      <div class="cta-button">
+        <a href="#" class="btn-shop">Shop Now</a>
+      </div>
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <h1 class="reveal-text">Fuel Your <span class="highlight">Performance</span></h1>
+        <p class="subtitle reveal-text-delay">Premium creatine formula for maximum results</p>
+        <div class="cta-group">
+          <a href="#products" class="btn-primary">Discover Now</a>
+          <a href="#about" class="btn-secondary">Learn More</a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="product-3d-container">
+          <!-- 3D model container -->
+          <div id="product-model"></div>
+          <div class="glow-effect"></div>
+        </div>
+        <div class="particle-container" id="particles"></div>
+      </div>
+      <div class="scroll-indicator">
+        <div class="mouse">
+          <div class="wheel"></div>
+        </div>
+        <div class="arrows">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </section>
+
+    <section class="stats">
+      <div class="stat-item">
+        <h3><span class="counter" data-target="25">0</span>g</h3>
+        <p>Pure Creatine</p>
+      </div>
+      <div class="stat-item">
+        <h3><span class="counter" data-target="100">0</span>%</h3>
+        <p>Natural Ingredients</p>
+      </div>
+      <div class="stat-item">
+        <h3><span class="counter" data-target="30">0</span>+</h3>
+        <p>Scientific Studies</p>
+      </div>
+      <div class="stat-item">
+        <h3><span class="counter" data-target="500">0</span>k+</h3>
+        <p>Satisfied Customers</p>
+      </div>
+    </section>
+
+    <section class="features">
+      <h2 class="section-title">Why Choose Us</h2>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="icon">
+            <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/icons/lightning-charge-fill.svg" alt="Strength">
+          </div>
+          <h3>Maximum Strength</h3>
+          <p>Scientifically proven to increase your physical strength and power output.</p>
+        </div>
+        <div class="feature-card">
+          <div class="icon">
+            <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/icons/activity.svg" alt="Muscle">
+          </div>
+          <h3>Muscle Recovery</h3>
+          <p>Reduces muscle recovery time and helps rebuild damaged muscle tissue faster.</p>
+        </div>
+        <div class="feature-card">
+          <div class="icon">
+            <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/icons/flask.svg" alt="Formula">
+          </div>
+          <h3>Pure Formula</h3>
+          <p>No fillers, no artificial ingredients - just pure pharmaceutical grade creatine.</p>
+        </div>
+        <div class="feature-card">
+          <div class="icon">
+            <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/icons/graph-up.svg" alt="Performance">
+          </div>
+          <h3>Enhanced Performance</h3>
+          <p>Boost your athletic performance and achieve your fitness goals faster.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="products-preview" id="products">
+      <h2 class="section-title">Featured Products</h2>
+      <div class="products-grid">
+        <div class="product-card" data-product-id="1">
+          <div class="product-image">
+            <img src="https://images.pexels.com/photos/3621181/pexels-photo-3621181.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Creatine Monohydrate">
+          </div>
+          <div class="product-info">
+            <h3>Creatine Monohydrate</h3>
+            <p class="product-desc">Pure creatine formula for increased strength and power.</p>
+            <div class="product-price">$39.99</div>
+            <a href="#" class="btn-view">Quick View</a>
+          </div>
+        </div>
+        <div class="product-card" data-product-id="2">
+          <div class="product-image">
+            <img src="https://images.pexels.com/photos/4397833/pexels-photo-4397833.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Creatine HCL">
+          </div>
+          <div class="product-info">
+            <h3>Creatine HCL</h3>
+            <p class="product-desc">Advanced formula with enhanced absorption and no bloating.</p>
+            <div class="product-price">$49.99</div>
+            <a href="#" class="btn-view">Quick View</a>
+          </div>
+        </div>
+        <div class="product-card" data-product-id="3">
+          <div class="product-image">
+            <img src="https://images.pexels.com/photos/4033918/pexels-photo-4033918.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Creatine Performance Blend">
+          </div>
+          <div class="product-info">
+            <h3>Performance Blend</h3>
+            <p class="product-desc">Premium blend with added BCAAs and electrolytes.</p>
+            <div class="product-price">$59.99</div>
+            <a href="#" class="btn-view">Quick View</a>
+          </div>
+        </div>
+      </div>
+      <div class="cta-center">
+        <a href="products.html" class="btn-primary">View All Products</a>
+      </div>
+    </section>
+
+    <section class="testimonials">
+      <h2 class="section-title">What Our Customers Say</h2>
+      <div class="testimonials-slider">
+        <div class="testimonial">
+          <div class="quote">"Since using Nutrition Express creatine, my workout performance has increased by 20%. I'm seeing gains faster than ever."</div>
+          <div class="client">
+            <div class="client-image">
+              <img src="https://images.pexels.com/photos/1681010/pexels-photo-1681010.jpeg?auto=compress&cs=tinysrgb&w=600" alt="John D.">
+            </div>
+            <div class="client-info">
+              <h4>John D.</h4>
+              <p>Fitness Coach</p>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial">
+          <div class="quote">"The quality of this creatine is unmatched. No stomach issues, mixes perfectly, and delivers incredible results."</div>
+          <div class="client">
+            <div class="client-image">
+              <img src="https://images.pexels.com/photos/733872/pexels-photo-733872.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Sarah L.">
+            </div>
+            <div class="client-info">
+              <h4>Sarah L.</h4>
+              <p>Bodybuilder</p>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial">
+          <div class="quote">"After trying multiple brands, I've finally found a creatine that actually delivers on its promises. Highly recommended."</div>
+          <div class="client">
+            <div class="client-image">
+              <img src="https://images.pexels.com/photos/1516680/pexels-photo-1516680.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Michael R.">
+            </div>
+            <div class="client-info">
+              <h4>Michael R.</h4>
+              <p>Athletic Trainer</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-logo">
+        <h2>Nutrition<span>Express</span></h2>
+        <p>Premium sports nutrition for elite performance.</p>
+      </div>
+      <div class="footer-links">
+        <div class="link-group">
+          <h4>Navigation</h4>
+          <a href="index.html">Home</a>
+          <a href="products.html">Products</a>
+          <a href="#">About Us</a>
+          <a href="#">Contact</a>
+        </div>
+        <div class="link-group">
+          <h4>Products</h4>
+          <a href="#">Creatine</a>
+          <a href="#">Protein</a>
+          <a href="#">Pre-Workout</a>
+          <a href="#">Accessories</a>
+        </div>
+        <div class="link-group">
+          <h4>Support</h4>
+          <a href="#">FAQ</a>
+          <a href="#">Shipping</a>
+          <a href="#">Returns</a>
+          <a href="#">Privacy Policy</a>
+        </div>
+      </div>
+      <div class="footer-newsletter">
+        <h4>Stay Updated</h4>
+        <p>Subscribe to our newsletter for exclusive offers and updates.</p>
+        <form>
+          <input type="email" placeholder="Your email address">
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Nutrition Express. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <div class="product-modal">
+    <div class="modal-content">
+      <div class="modal-close">&times;</div>
+      <div class="modal-product">
+        <div class="modal-image">
+          <img src="" alt="Product Image">
+        </div>
+        <div class="modal-info">
+          <h3 class="modal-title"></h3>
+          <div class="modal-rating">
+            <span class="stars"></span>
+            <span class="reviews"></span>
+          </div>
+          <div class="modal-price"></div>
+          <div class="modal-description"></div>
+          <div class="modal-benefits">
+            <h4>Key Benefits</h4>
+            <ul></ul>
+          </div>
+          <div class="modal-actions">
+            <div class="quantity">
+              <button class="qty-minus">-</button>
+              <input type="number" value="1" min="1">
+              <button class="qty-plus">+</button>
+            </div>
+            <button class="btn-add-cart"><span>Add to Cart</span></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- External libraries (CDN) -->
+  <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/build/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.9.1/dist/gsap.min.js"></script>
+  
+  <!-- Custom scripts -->
+  <script src="js/main.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/3d-model.js"></script>
+  <script src="js/products.js"></script>
+  <script src="js/cursor.js"></script>
+</body>
+</html>

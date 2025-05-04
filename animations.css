@@ -1,0 +1,226 @@
+/* Animation Styles */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-15px) rotate(2deg);
+  }
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes breathe {
+  0% {
+    box-shadow: 0 0 10px rgba(0, 212, 255, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 25px rgba(0, 212, 255, 0.6);
+  }
+  100% {
+    box-shadow: 0 0 10px rgba(0, 212, 255, 0.3);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+@keyframes rotateIn {
+  from {
+    opacity: 0;
+    transform: rotate(-10deg) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: rotate(0) scale(1);
+  }
+}
+
+/* Text Reveal Animation */
+.reveal-text, .reveal-text-delay {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.reveal-text::after, .reveal-text-delay::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, var(--secondary), var(--accent));
+  animation: revealTextLeft 1.5s cubic-bezier(.19,1,.22,1) forwards;
+  animation-delay: 2.5s;
+}
+
+.reveal-text-delay::after {
+  animation-delay: 2.7s;
+}
+
+@keyframes revealTextLeft {
+  0% {
+    width: 100%;
+    left: 0;
+  }
+  100% {
+    width: 0;
+    left: 100%;
+  }
+}
+
+/* Cursor Styles */
+.cursor, .cursor-follower {
+  position: fixed;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: var(--z-max);
+}
+
+.cursor {
+  width: 8px;
+  height: 8px;
+  background-color: var(--accent);
+  transform: translate(-50%, -50%);
+  transition: transform 0.1s;
+}
+
+.cursor-follower {
+  width: 30px;
+  height: 30px;
+  background-color: rgba(0, 212, 255, 0.2);
+  transform: translate(-50%, -50%);
+  transition: transform 0.3s ease, width 0.3s ease, height 0.3s ease, background-color 0.3s ease;
+  backdrop-filter: blur(2px);
+  border: 1px solid rgba(0, 212, 255, 0.3);
+}
+
+.cursor.active {
+  transform: translate(-50%, -50%) scale(0);
+}
+
+.cursor-follower.active {
+  width: 50px;
+  height: 50px;
+  background-color: rgba(0, 212, 255, 0.1);
+  border-color: var(--accent);
+}
+
+.cursor.hidden, .cursor-follower.hidden {
+  opacity: 0;
+}
+
+/* Animation Classes */
+.fade-in {
+  animation: fadeIn 1s ease forwards;
+}
+
+.fade-in-up {
+  opacity: 0;
+  animation: fadeInUp 1s ease forwards;
+}
+
+.fade-in-right {
+  opacity: 0;
+  animation: fadeInRight 1s ease forwards;
+}
+
+.scale-in {
+  opacity: 0;
+  animation: scaleIn 1s ease forwards;
+}
+
+.float-animation {
+  animation: float 6s ease-in-out infinite;
+}
+
+.pulse-animation {
+  animation: pulse 3s ease-in-out infinite;
+}
+
+.shimmer-effect {
+  background: linear-gradient(90deg, 
+    rgba(255, 255, 255, 0), 
+    rgba(255, 255, 255, 0.2), 
+    rgba(255, 255, 255, 0)
+  );
+  background-size: 200% 100%;
+  animation: shimmer 2s infinite;
+}
+
+.rotate-in {
+  animation: rotateIn 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Stagger Animation Delays */
+.stagger > *:nth-child(1) { animation-delay: 0.1s; }
+.stagger > *:nth-child(2) { animation-delay: 0.2s; }
+.stagger > *:nth-child(3) { animation-delay: 0.3s; }
+.stagger > *:nth-child(4) { animation-delay: 0.4s; }
+.stagger > *:nth-child(5) { animation-delay: 0.5s; }
+.stagger > *:nth-child(6) { animation-delay: 0.6s; }

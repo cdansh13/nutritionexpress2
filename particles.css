@@ -1,0 +1,22 @@
+/* Particle styles for hero section */
+.particle {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(5px);
+  pointer-events: none;
+}
+
+@keyframes floatParticle {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  33% {
+    transform: translate(30px, -50px) rotate(90deg);
+  }
+  66% {
+    transform: translate(-20px, 20px) rotate(180deg);
+  }
+  100% {
+    transform: translate(0, -20px) rotate(360deg);
+  }
+}

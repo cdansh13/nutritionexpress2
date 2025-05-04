@@ -1,0 +1,321 @@
+/* Hero Section Styles */
+.hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  padding: 0 var(--spacing-lg);
+}
+
+.hero:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 70% 50%, rgba(121, 40, 202, 0.15) 0%, rgba(0, 0, 0, 0) 70%),
+              radial-gradient(circle at 30% 60%, rgba(0, 212, 255, 0.15) 0%, rgba(0, 0, 0, 0) 70%);
+  z-index: var(--z-below);
+}
+
+.hero-content {
+  flex: 1;
+  max-width: 600px;
+  z-index: var(--z-normal);
+}
+
+.hero h1 {
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: var(--spacing-md);
+  position: relative;
+}
+
+.hero .subtitle {
+  font-size: 1.25rem;
+  color: var(--text-muted);
+  margin-bottom: var(--spacing-lg);
+  max-width: 500px;
+}
+
+.hero-visual {
+  flex: 1;
+  position: relative;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.product-3d-container {
+  width: 400px;
+  height: 400px;
+  position: relative;
+  perspective: 1000px;
+  z-index: var(--z-normal);
+  animation: fadeIn 1s ease-out forwards;
+  opacity: 0;
+  animation-delay: 2.8s;
+}
+
+#product-model {
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transform: rotateY(20deg) rotateX(10deg);
+  position: relative;
+  transition: transform 0.5s ease;
+}
+
+.glow-effect {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(0, 212, 255, 0.4) 0%, rgba(121, 40, 202, 0.1) 50%, rgba(0, 0, 0, 0) 70%);
+  border-radius: 50%;
+  filter: blur(40px);
+  z-index: var(--z-below);
+  animation: pulseGlow 4s ease-in-out infinite alternate;
+}
+
+.particle-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: var(--z-below);
+}
+
+.scroll-indicator {
+  position: absolute;
+  bottom: var(--spacing-xl);
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: var(--z-normal);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  opacity: 0;
+  animation: fadeIn 1s ease-out forwards;
+  animation-delay: 3.5s;
+}
+
+.mouse {
+  width: 30px;
+  height: 50px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 20px;
+  position: relative;
+  margin-bottom: var(--spacing-md);
+}
+
+.wheel {
+  width: 6px;
+  height: 6px;
+  background-color: var(--accent);
+  border-radius: 50%;
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: scrollWheel 2s ease-in-out infinite;
+}
+
+.arrows {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.arrows span {
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+  border-right: 2px solid rgba(255, 255, 255, 0.3);
+  transform: rotate(45deg);
+  margin: -4px;
+  animation: scrollArrow 2s infinite;
+}
+
+.arrows span:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.arrows span:nth-child(2) {
+  animation-delay: 0.15s;
+}
+
+.arrows span:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scrollWheel {
+  0% {
+    opacity: 1;
+    top: 10px;
+  }
+  100% {
+    opacity: 0;
+    top: 30px;
+  }
+}
+
+@keyframes scrollArrow {
+  0% {
+    opacity: 0;
+    transform: rotate(45deg) translate(-5px, -5px);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+}
+
+@keyframes pulseGlow {
+  0% {
+    opacity: 0.5;
+    transform: translate(-50%, -50%) scale(0.8);
+  }
+  100% {
+    opacity: 0.7;
+    transform: translate(-50%, -50%) scale(1.2);
+  }
+}
+
+/* Stats Section */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--spacing-lg);
+  padding: var(--spacing-xxl) var(--spacing-lg);
+  background: linear-gradient(to bottom, var(--primary-dark), var(--primary));
+  position: relative;
+  z-index: var(--z-normal);
+}
+
+.stats:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 10% 50%, rgba(121, 40, 202, 0.1) 0%, rgba(0, 0, 0, 0) 70%),
+              radial-gradient(circle at 90% 90%, rgba(0, 212, 255, 0.1) 0%, rgba(0, 0, 0, 0) 70%);
+  z-index: -1;
+}
+
+.stat-item {
+  text-align: center;
+  padding: var(--spacing-lg);
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: all var(--transition-normal);
+}
+
+.stat-item:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 15px 30px -10px rgba(0, 0, 0, 0.3);
+}
+
+.stat-item h3 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: var(--spacing-sm);
+  background: linear-gradient(45deg, var(--text-light), var(--accent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  display: inline-block;
+}
+
+.stat-item p {
+  color: var(--text-muted);
+  font-size: 1rem;
+  margin: 0;
+}
+
+@media (max-width: 1024px) {
+  .hero {
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 100px;
+    height: auto;
+    min-height: 100vh;
+  }
+  
+  .hero-content {
+    max-width: 100%;
+    text-align: center;
+    margin-bottom: var(--spacing-xl);
+  }
+  
+  .hero h1 {
+    font-size: 3rem;
+  }
+  
+  .hero .subtitle {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .cta-group {
+    justify-content: center;
+  }
+  
+  .product-3d-container {
+    width: 300px;
+    height: 300px;
+  }
+  
+  .stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+  
+  .product-3d-container {
+    width: 250px;
+    height: 250px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+  
+  .stats {
+    grid-template-columns: 1fr;
+  }
+}
